@@ -1,19 +1,37 @@
-"""
+'''
 Projet Final
-"""
 
+Auteurs :
+Cyprien Venard
+Paul Di Prizio
+Odon Prouille
+
+Version :
+
+
+Date de dernière révision :
+
+
+Adresse Github: 
+https://github.com/Cypri3n/Projet-Final
+
+'''
+# coding: utf-8
+
+#import des modules
 from random import randint
 
-for i in range (randint(2, 200000)):
-    print("Bon courage")
-
-for i in range(500):
-    print("Ok quoikoubeh")
-
-"""
-commit 3
-"""
+#import pygame
 
 
-for i in range(18):
-    print("enfin")
+
+#définition des constantes
+
+
+
+#définitionn des fonctions dans l'ordre d'utlilisation
+
+
+'''
+Début du programme principal
+'''
