@@ -33,6 +33,28 @@ from random import randint
 '''
 Début du programme principal
 '''
+import turtle
+
+# Fonction pour avancer et dessiner quand on clique sur l'écran
+def avancer_et_dessiner(x, y):
+    turtle.goto(x, y)
+    turtle.dot(10)  # Dessiner un point à la position actuelle
+
+# Initialisation de Turtle
+turtle.setup(width=600, height=600)
+turtle.title("Dessin à la souris")
+
+# Configurer turtle pour dessiner
+turtle.penup()  # Ne pas dessiner de lignes lors des déplacements
+turtle.speed(0)  # Vitesse maximale
+
+# Liaison de la fonction avancer_et_dessiner au clic de la souris
+turtle.onscreenclick(avancer_et_dessiner)
+
+
+
+# Démarrer la boucle principale de Turtle
+turtle.mainloop()
 
 
 
