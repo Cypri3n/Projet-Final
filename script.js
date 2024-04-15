@@ -1,6 +1,6 @@
 const canvas = document.querySelector("canvas"),
 toolBtns = document.querySelectorAll(".tool"),
-fillColor = document.querySelector("#fill-color"),
+fillColor = document.querySelector("#remplir"),
 sizeSlider = document.querySelector("#size-slider"),
 colorBtns = document.querySelectorAll(".colors .option"),
 colorPicker = document.querySelector("#color-picker"),
@@ -71,15 +71,15 @@ const drawing = (e) => {
     if(!isDrawing) return; // if isDrawing is false return from here
     ctx.putImageData(snapshot, 0, 0); // adding copied canvas data on to this canvas
 
-    if(selectedTool === "brush" || selectedTool === "eraser") {
+    if(selectedTool === "brush" || selectedTool === "gomme") {
         // if selected tool is eraser then set strokeStyle to white 
         // to paint white color on to the existing canvas content else set the stroke color to selected color
-        ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor;
+        ctx.strokeStyle = selectedTool === "gomme" ? "#fff" : selectedColor;
         ctx.lineTo(e.offsetX, e.offsetY); // creating line according to the mouse pointer
         ctx.stroke(); // drawing/filling line with color
     } else if(selectedTool === "rectangle"){
         drawRect(e);
-    } else if(selectedTool === "circle"){
+    } else if(selectedTool === "cercle"){
         drawCircle(e);
     } else {
         drawTriangle(e);
