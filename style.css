@@ -11,7 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #4A98F7;
+  background: #2b8528;
 }
 .container{
   display: flex;
@@ -50,9 +50,9 @@ section{
   padding-left: 10px;
 }
 .option:is(:hover, .active) :where(span, label){
-  color: #4A98F7;
+  color: #4A98F7; /* couleur du pinceau*/
 }
-.option #fill-color{
+.option #remplir{
   cursor: pointer;
   height: 14px;
   width: 14px;
@@ -127,6 +127,7 @@ section{
   color: #6C757D;
   border: 1px solid #6C757D;
   transition: all 0.3s ease;
+  font-size: 20px;
 }
 .clear-canvas:hover{
   color: #fff;
