@@ -11,13 +11,14 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background: #256e22;
 }
 .container{
   display: flex;
   width: 100%;
   gap: 10px;
   padding: 10px;
-  max-width: 1050px;
+  max-width: 1500px; /*largeur max du tout*/
 }
 section{
   background: #fff;
@@ -54,7 +55,7 @@ section{
 .option.active span,
 .option:hover label,
 .option.active label {
-  color: #4A98F7; /* couleur du pinceau*/
+  color: #4A98F7; /* couleur des textes*/
 }
 .option #remplir{
   cursor: pointer;
