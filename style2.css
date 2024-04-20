@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+body {
+    /*background: no-repeat url(fd-écran\ B.png);*/
+    /*background-size: 100% 50rem;*/
+    background-color: aliceblue;
+}
+
+h1 { 
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 7rem;
+    margin-top: -1rem;
+    color: hotpink;
+    
+}
+
+#imageBarbouille {
+    width: 250px;
+ 
+}
+
+picture {
+    
+    position: absolute;
+    top: 10rem; left: 40rem;
+}
