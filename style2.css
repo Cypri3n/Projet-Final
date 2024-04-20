@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Titan+One&display=swap');
 
 body {
     /*background: no-repeat url(fd-écran\ B.png);*/
     /*background-size: 100% 50rem;*/
-    background-color: aliceblue;
+    background-color: rgb(151, 252, 218) ;
 }
 
 h1 { 
@@ -16,11 +16,45 @@ h1 {
 
 #imageBarbouille {
     width: 250px;
- 
+    
+}
+#imageBarbapapa {
+    position: relative;
+    width: 150px;
+
 }
 
+#imageBarbamama {
+    position: relative;
+    width: 110px;
+}
+
+
 picture {
-    
     position: absolute;
-    top: 10rem; left: 40rem;
+    top: 22rem; left: 40rem;
+}
+
+
+#btnchgmtpage {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    padding: 0.6em;
+    border-radius: 5px;
+    background-color: hotpink;
+    border: 1px solid #444; 
+    position: absolute;
+    top: 8.5em; left: 30rem;
+    font-size: 1.5rem;
+}
+
+.perso {
+    background-color: white;
+    border-radius: 3px;
+    border: 3px solid #000000;
+    font-family: "Titan One", sans-serif;
+    padding-top: 1rem;
+
 }
