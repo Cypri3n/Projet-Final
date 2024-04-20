@@ -11,8 +11,8 @@ ctx = canvas.getContext("2d");
 // variable globales avec les valeurs de base
 let prevMouseX, prevMouseY, snapshot,
 isDrawing = false,
-selectedTool = "brush",
-brushWidth = 5,
+selectedTool = "pinceau",
+taillepinceau = 5,
 selectedColor = "#000";
 
 const setCanvasBackground = () => {
@@ -60,7 +60,7 @@ const startDraw = (e) => {
     prevMouseX = e.offsetX; // passing current mouseX position as prevMouseX value
     prevMouseY = e.offsetY; // passing current mouseY position as prevMouseY value
     ctx.beginPath(); // creating new path to draw
-    ctx.lineWidth = brushWidth; // passing brushSize as line width
+    ctx.lineWidth = taillepinceau; // passing brushSize as line width
     ctx.strokeStyle = selectedColor; // passing selectedColor as stroke style
     ctx.fillStyle = selectedColor; // passing selectedColor as fill style
     // copying canvas data & passing as snapshot value.. this avoids dragging the image
@@ -71,7 +71,7 @@ const drawing = (e) => {
     if(!isDrawing) return; // if isDrawing is false return from here
     ctx.putImageData(snapshot, 0, 0); // adding copied canvas data on to this canvas
 
-    if(selectedTool === "brush" || selectedTool === "gomme") {
+    if(selectedTool === "pinceau" || selectedTool === "gomme") {
         // if selected tool is eraser then set strokeStyle to white 
         // to paint white color on to the existing canvas content else set the stroke color to selected color
         ctx.strokeStyle = selectedTool === "gomme" ? "#fff" : selectedColor;
@@ -95,7 +95,7 @@ toolBtns.forEach(btn => {
     });
 });
 
-sizeSlider.addEventListener("change", () => brushWidth = sizeSlider.value); // passing slider value as brushSize
+sizeSlider.addEventListener("change", () => taillepinceau = sizeSlider.value); // passing slider value as brushSize
 
 colorBtns.forEach(btn => {
     btn.addEventListener("click", () => { // adding click event to all color button
@@ -120,11 +120,11 @@ clearCanvas.addEventListener("click", () => {
 
 saveImg.addEventListener("click", () => {
     const link = document.createElement("a"); // creating <a> element
-    link.download = `${Date.now()}.jpg`; // passing current date as link download value
+    link.download = `Mon Barbapapa.jpg`; // passing current date as link download value
     link.href = canvas.toDataURL(); // passing canvasData as link href value
     link.click(); // clicking link to download image
 });
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup", () => isDrawing = false);
+canvas.addEventListener("mouseup", () => isDrawing = false);s
