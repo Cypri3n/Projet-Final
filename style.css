@@ -11,7 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #256e22;
+  background: rgb(151, 252, 218);
 }
 .container{
   display: flex;
@@ -27,6 +27,7 @@ section{
 .tools-board{
   width: 210px;
   padding: 15px 22px 0;
+  border: 0.1rem solid;
 }
 .tools-board .row{
   margin-bottom: 20px;
@@ -145,6 +146,7 @@ section{
 .drawing-board{
   flex: 1;
   overflow: hidden;
+  border: 0.2rem solid;
 }
 .drawing-board canvas{
   width: 100%;
