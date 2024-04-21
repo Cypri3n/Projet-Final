@@ -14,7 +14,7 @@ h1 {
     
 }
 
-#imageBarbouille {
+#imageBarbouille1 {
     width: 250px;
     
 }
@@ -30,13 +30,21 @@ h1 {
 }
 
 
+#imageB {
+    position: relative;
+    width: 110px;
+}
+
+
+
+
 picture {
     position: absolute;
     top: 22rem; left: 40rem;
 }
 
 
-#btnchgmtpage {
+.btnchgmtpage {
     font-family: "Titan One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -46,8 +54,18 @@ picture {
     background-color: hotpink;
     border: 1px solid #444; 
     position: absolute;
-    top: 8.5em; left: 30rem;
+    
     font-size: 1.5rem;
+}
+
+
+#p1 {
+    top: 8.5em; left: 30rem;
+}
+
+#p2 {
+    top: 8.5em; left: 52rem;
+
 }
 
 .perso {
