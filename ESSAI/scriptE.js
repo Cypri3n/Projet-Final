@@ -57,3 +57,4 @@ btn_outils.forEach(btn => {
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mouseup", startDraw);
 canvas.addEventListener("mousemove", drawing);
+
