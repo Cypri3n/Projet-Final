@@ -21,6 +21,10 @@ body {
   height: 400px; /* Ajustez selon vos besoins */
   width: 700px;
   margin: auto; /* Pour centrer horizontalement */
+  background-color: #ffffff;
+  border: 1px solid #ff5ab5;  
+  border-radius: 5px;
+  border-width: 10px;
 }
 
 section {
@@ -43,9 +47,6 @@ img{
   padding: 5px;
 }
 
-img:hover{
-  background-color: #e0e0e0;
-}
 
 h1{
   font-size: 300%;
@@ -71,4 +72,8 @@ h1{
 canvas {  
   width: 100%;
   height: 100%;
+}
+
+.actif {
+  background-color: #7e4b4b;
 }
