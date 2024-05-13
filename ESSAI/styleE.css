@@ -27,9 +27,7 @@ body {
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
-section {
-  background-color: #236aad;
-}
+
 
 #barreoutils {
   background-color: #a0a0a0;
@@ -48,8 +46,10 @@ img{
 }
 
 img:hover{
-  background-color: #e0e0e0;
+  background-color: #c5c5c5;
+  cursor: pointer;
 }
+
 h1{
   font-size: 300%;
   font-family: 'Magmit';
@@ -81,4 +81,52 @@ canvas {
 .outil.actif {
   background-color: #e0e0e0;
 }
+
+button  {
+  width: 100%;
+  color: #000000;
+  font-size: 150%;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  width:  10%;
+  height: 50%;
+}
+
+.couleurs{
+  list-style-type: none;
+  display : flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.couleur{
+  height: 30px;
+  width:  30px;
+  background: red;
+  border-radius: 25%;
+  margin-top: 3px;
+}
+
+.couleur:nth-child(1){
+  background: rgb(255, 255, 255);
+}
+.couleur:nth-child(2){
+  background: rgb(0, 0, 0);
+}
+.couleur:nth-child(3){
+  background: red;
+}
+.couleur:nth-child(4){
+  background: green;
+}
+.couleur:nth-child(5){
+  background: blue;
+}
+
+
+#couleur_perso {
+  display : none;
+}
+
 
