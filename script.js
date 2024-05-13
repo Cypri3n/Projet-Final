@@ -8,6 +8,13 @@ SUPPRCanvas = document.querySelector(".SUPPR-canvas"),
 saveImg = document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
 
+//Fond d'écran dynamique
+const frame = document.getElementById('frame');
+const file = document.getElementById('file');
+file.addEventListener('change', function() {
+    // set the background image of `frame` to the uploaded image
+});
+
 // variable globales avec les valeurs de base
 let prevMouseX, prevMouseY, snapshot,
 isDrawing = false,
