@@ -67,3 +67,8 @@ h1{
 #retour:hover {
   background-image: url('https://www.barbapapa.com/wp-content/themes/barbapapa-from-twentytwelve/images/family_rollover.gif');
 }
+
+canvas {  
+  width: 100%;
+  height: 100%;
+}
