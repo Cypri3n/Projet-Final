@@ -1,0 +1,32 @@
+
+body{
+  background: rgb(151, 252, 218);
+}
+
+#tableau {
+  height: 100px;
+  width: 100px;
+}
+
+section {
+  background-color: #236aad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#barreoutils {
+  
+  background-color: #356592;
+  height: 100px;
+  gap: 50px;
+
+  
+}
+
+img{
+  background-color: #7fa5c9;
+  width: 100px;
+  height: 100px;
+}
