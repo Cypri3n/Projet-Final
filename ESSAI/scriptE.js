@@ -2,6 +2,7 @@ const canvas = document.querySelector('canvas'),
 poubelle = document.querySelector('#poubelle'),
 sauvegarder  = document.querySelector("#sauvegarder"),
 btns_couleur  = document.querySelector("#size-slider"),
+curseurtaille = document.querySelector("#curseur-taille"),
 btn_outils = document.querySelectorAll(".outil");
 ctx = canvas.getContext("2d");
 
@@ -53,6 +54,8 @@ btn_outils.forEach(btn => {
     console.log(outil_selectione);
   })
 });
+
+curseurtaille.addEventListener("change", () =>  épaisseur = curseurtaille.value);
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mouseup", startDraw);
