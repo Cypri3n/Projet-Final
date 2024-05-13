@@ -1,36 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Titan+One&display=swap');
 
-body {
-    /*background: no-repeat url(fd-écran\ B.png);*/
-    /*background-size: 100% 50rem;*/
-    background-color: rgb(151, 252, 218) ;
-}
 
 h1 { 
     font-family: "Rubik Bubbles", system-ui;
     font-size: 7rem;
     margin-top: -1rem;
     color: hotpink;
+    display: flex;
+    justify-content: center;
+    
     
 }
 
-#imageBarbouille1 {
-    width: 250px;
+body{
+
+    background: rgb(151, 252, 218);
     
-}
+  }
 
 
-#imageB {
-    position: relative;
-    width: 110px;
-}
-
-
-
-
-picture {
-    position: absolute;
-    top: 22rem; left: 40rem;
+img {
+    margin-top: 100px;
 }
 
 
@@ -38,25 +28,34 @@ picture {
     font-family: "Titan One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
     color: black;
     padding: 0.6em;
     border-radius: 5px;
     background-color: hotpink;
-    border: 1px solid #444; 
-    position: absolute;
-    
+    border: 1px solid #444;  
     font-size: 1.5rem;
+    width: 200px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 
-#p1 {
-    top: 8.5em; left: 30rem;
-}
+.btnchgmtpage:hover {
 
-#p2 {
-    top: 8.5em; left: 52rem;
+    background-color:rgb(173, 58, 117);
 
 }
+
+
+
+
+
 
 .perso {
     background-color: white;
@@ -66,3 +65,5 @@ picture {
     padding-top: 1rem;
 
 }
+
+
