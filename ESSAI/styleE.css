@@ -1,32 +1,69 @@
+@font-face {
+  font-family: 'Magmit';
+  src: url('../MAGIMT__.TTF') format('truetype');
+}
 
-body{
-  background: rgb(151, 252, 218);
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
 }
 
 #tableau {
-  height: 100px;
-  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Ajustez selon vos besoins */
+  width: 700px;
+  margin: auto; /* Pour centrer horizontalement */
 }
 
 section {
   background-color: #236aad;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
 }
 
 #barreoutils {
-  
-  background-color: #356592;
+  background-color: #a0a0a0;
+  display: flex;
+  justify-content: center; /* Pour répartir les images sur toute la largeur */
+  align-items: center;
   height: 100px;
   gap: 50px;
-
-  
 }
 
 img{
-  background-color: #7fa5c9;
-  width: 100px;
-  height: 100px;
+  background-color: #bdbdbd;
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+}
+
+img:hover{
+  background-color: #e0e0e0;
+}
+
+h1{
+  font-size: 300%;
+  font-family: 'Magmit';
+  color: hotpink ;
+}
+
+#retour {  
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  background : no-repeat;
+  height: 83px;   
+  width: 83px;
+  background-image: url('https://www.barbapapa.com/wp-content/themes/barbapapa-from-twentytwelve/images/family.gif');    
+}
+
+
+#retour:hover {
+  background-image: url('https://www.barbapapa.com/wp-content/themes/barbapapa-from-twentytwelve/images/family_rollover.gif');
 }
