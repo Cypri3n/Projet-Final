@@ -77,6 +77,8 @@ canvas {
   height: 100%;
 }
 
-.actif {
-  background-color: #7e4b4b;
+
+.outil.actif {
+  background-color: #e0e0e0;
 }
+
