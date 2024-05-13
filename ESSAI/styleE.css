@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background: rgb(255, 255, 255);
+  background: rgb(210, 230, 241);
 }
 
 #tableau {
@@ -22,9 +22,9 @@ body {
   width: 700px;
   margin: auto; /* Pour centrer horizontalement */
   background-color: #ffffff;
-  border: 1px solid #ff5ab5;  
-  border-radius: 5px;
   border-width: 10px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 section {
@@ -47,7 +47,9 @@ img{
   padding: 5px;
 }
 
-
+img:hover{
+  background-color: #e0e0e0;
+}
 h1{
   font-size: 300%;
   font-family: 'Magmit';
@@ -55,6 +57,7 @@ h1{
 }
 
 #retour {  
+  position: absolute;
   margin-top: 10px;
   margin-left: 10px;
   display: flex;
