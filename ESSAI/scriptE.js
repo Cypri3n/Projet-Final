@@ -29,7 +29,7 @@ gomme.addEventListener("click", () => {
 
 btn_outils.forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelector(".outil .actif").classList.remove("actif");
+    document.querySelector(".outil.actif").classList.remove("actif");
     btn.classList.add("actif");
     outil_selectione = btn.id;
     console.log(outil_selectione);
