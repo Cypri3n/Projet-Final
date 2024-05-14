@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: 'Stanberry';
-  src: url('/Stanberry.ttf') format('truetype');
+  src: url('polices/Stanberry.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Magmit';
-  src: url('/MAGIMT__.TTF') format('truetype');
+  src: url('polices/MAGIMT__.TTF') format('truetype');
 }
 
 h1 { 
