@@ -18,30 +18,26 @@
     </section>
 
     <section  id= "barreoutils">
-        <img src="../icons/cercle.svg" alt="cercle" id="cercle" class="outil">
+
+        <img src="../icons/rectangle.svg" alt="rectangle" id="rectangle" class="outil">
         <img src="../icons/gomme.svg" alt="gomme" id="gomme" class="outil">
         <img src="../icons/pinceau.svg" alt="pinceau" id="pinceau" class="outil actif">
-        <img src="../icons/rectangle.svg" alt="rectangle" id="rectangle" class="outil">
-        <img src="../icons/triangle.svg" alt="triangle" id="triangle" class="outil"> 
+
+        <section class="couleurs">
+          <li class="couleur "></li>
+          <li class="couleur actif"></li>
+          <li class="couleur"></li>
+          <li class="couleur "></li>
+          <li class="couleur">
+            <input type="color" id="couleur_perso" value="#0000FF">
+          </li>
+        </section>
+
+        <input type="range" id="curseur" min="1" max="30" value="5">
 
         <button id="poubelle">🗑️</button>
         <button id="sauvegarder">Enregistrer</button>
 
-        <ul class="couleurs">
-          <li class="couleur"></li>
-          <li class="couleur"></li>
-          <li class="couleur"></li>
-          <li class="couleur"></li>
-          <li class="couleur">
-            <input type="color" id="couleur_perso" value="#0000FF">
-          </li>
-        </ul>
-      <section id="curseur">
-            <input type="range" id="curseur-taille" min="1" max="30" value="5">
-            <span>Taille de l'outil</span>
-
-
-      </section>
 
 
     </section>
