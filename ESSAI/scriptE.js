@@ -3,6 +3,7 @@ poubelle = document.querySelector('#poubelle'),
 sauvegarder  = document.querySelector("#sauvegarder"),
 curseur_taille = document.querySelector("#curseur"),
 btns_couleur = document.querySelectorAll(".couleurs .couleur"),
+couleur_perso = document.querySelector("#couleur_perso"),
 btn_outils = document.querySelectorAll(".outil");
 ctx = canvas.getContext("2d");
 
@@ -21,8 +22,7 @@ window.addEventListener("load", () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     fond_canvas();
-    ctx.strokeStyle = couleur_actuelle;
-    ctx.fillStyle = couleur_actuelle;
+
 });
 
 
@@ -30,6 +30,8 @@ const startDraw = () => {
   Dessine = !Dessine;
   ctx.beginPath();
   ctx.lineWidth = épaisseur;
+  ctx.strokeStyle = couleur_actuelle;
+  ctx.fillStyle = couleur_actuelle;
 }
 
 const drawing = (e) => {
@@ -66,8 +68,14 @@ btns_couleur .forEach(btn => {
     document.querySelector(".couleur.actif").classList.remove("actif");
     btn.classList.add("actif");
     couleur_actuelle = window.getComputedStyle(btn).getPropertyValue("background");
+    console.log(window.getComputedStyle(btn).getPropertyValue("background"));
   });
 });
+
+couleur_perso.addEventListener('change', () => {
+  couleur_perso.parentElement.style.background = couleur_perso.value;
+  couleur_perso.parentElement.click();
+})
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mouseup", startDraw);
