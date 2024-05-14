@@ -9,6 +9,7 @@ ctx = canvas.getContext("2d");
 
 
 let  Dessine = false, 
+outil_selectione = "pinceau",
 couleur_actuelle = "#000",
 épaisseur = 5;
 
@@ -36,8 +37,13 @@ const startDraw = () => {
 
 const drawing = (e) => {
   if(!Dessine) return
-  ctx.lineTo(e.offsetX,e.offsetY);
-  ctx.stroke();
+
+  if(outil_selectione === "pinceau" || outil_selectione === "gomme") {
+    ctx.strokeStyle = outil_selectione === "gomme" ? "#fff" : couleur_actuelle;
+    ctx.lineTo(e.offsetX,e.offsetY);
+    ctx.stroke();
+  }
+
 }
 
 poubelle.addEventListener("click", () => {
@@ -80,4 +86,3 @@ couleur_perso.addEventListener('change', () => {
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mouseup", startDraw);
 canvas.addEventListener("mousemove", drawing);
-
