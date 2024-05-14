@@ -19,10 +19,6 @@ const fond_canvas = () => {
   ctx.fillStyle = couleur_actuelle;
 }
 
-const dessinerRect = (e) => {
-  
-  ctx.fillRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
-}
 
 
 window.addEventListener("load", () => {
@@ -33,8 +29,11 @@ window.addEventListener("load", () => {
 });
 
 
-const startDraw = () => {
+const startDraw = (e) => {
   Dessine = !Dessine;
+  prevMouseX = e.offsetX;
+  prevMouseY = e.offsetY;
+  snapshot = ctx.getImageData(0,0,canvas.width,canvas.height);
   
   ctx.beginPath();
   ctx.lineWidth = épaisseur;
@@ -42,10 +41,14 @@ const startDraw = () => {
   ctx.fillStyle = couleur_actuelle;
 }
 
+const dessinerRect = (e) => {
+  ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
+}
+
+
 const drawing = (e) => {
   if(!Dessine) return
-
-  
+  ctx.putImageData(snapshot, 0, 0);
 
   if(outil_selectione === "pinceau" || outil_selectione === "gomme") {
     ctx.strokeStyle = outil_selectione === "gomme" ? "#fff" : couleur_actuelle;
