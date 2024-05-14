@@ -1,3 +1,6 @@
+
+/*  importation d'une police à partir des fichiers locaux */
+
 @font-face {
   font-family: 'Magmit';
   src: url('../MAGIMT__.TTF') format('truetype');
@@ -23,6 +26,7 @@ body {
   margin: auto; 
   background-color: #ffffff;
   border-width: 10px;
+  border-radius: 10px;
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -35,11 +39,6 @@ body {
   align-items: center;
   height: 100px;
   gap: 1%;
-  margin-left: 5%;
-  margin-right: 5%;
-  border-width: 10px;
-  border-radius: 10px;
-  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 img{
@@ -58,7 +57,6 @@ h1{
   font-size: 5em;
   font-family: 'Magmit';
   color: hotpink ;
-  margin-top: -8px;
 }
 
 #retour {  
@@ -72,8 +70,10 @@ h1{
   background-image: url('https://www.barbapapa.com/wp-content/themes/barbapapa-from-twentytwelve/images/family.gif');    
 }
 
+/*  sélecteur pris en compte uniquement lors du passage de la souris sur le bouton (:hover) */
 
 #retour:hover {
+  cursor: pointer; /*  change le type de curseur */
   background-image: url('https://www.barbapapa.com/wp-content/themes/barbapapa-from-twentytwelve/images/family_rollover.gif');
 }
 
@@ -82,6 +82,7 @@ canvas {
   height: 100%;
 }
 
+/*  sélecteur concernant les éléments contenant la classe outil et actif */
 
 .outil.actif {
   background-color: #e0e0e0;
@@ -92,11 +93,13 @@ button  {
   color: #000000;
   font-size: 1.5vw;
   background: white;
-  border-radius: 4px;
+  border-radius: 4px; /* arrondissement des bordures */
   cursor: pointer;
   width:  10%;
   height: 50%;
 }
+
+/*  "contenant" des boutons couleur */
 
 .couleurs{
   list-style-type: none;
@@ -112,6 +115,8 @@ button  {
   border-radius: 25%;
   margin-top: 3px;
 }
+
+/* sélecteur des enfants de la classe couleur ( les 5 boutons de couleur) */
 
 .couleur:nth-child(1){
   background-color: rgb(255, 255, 255);
@@ -135,7 +140,10 @@ button  {
   cursor: pointer;
 }
 
+/*  sélecteur concernant les éléments contenant la classe couleur et actif */
+
 .couleur.actif {
   
-
 }
+
+
