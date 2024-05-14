@@ -41,11 +41,13 @@ const startDraw = (e) => {
   ctx.fillStyle = couleur_actuelle;
 }
 
+//Défini le fait de dessiner un rectangle, tant que le clic droit est enfoncé
 const dessinerRect = (e) => {
   ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
 }
 
 
+//regroupe tout ce qui concerne le dessin
 const drawing = (e) => {
   if(!Dessine) return
   ctx.putImageData(snapshot, 0, 0);
@@ -60,17 +62,22 @@ const drawing = (e) => {
 
 }
 
+
+//Défini l'action du bouton poubelle, qui permet de supprimer tout le canva dessiné 
 poubelle.addEventListener("click", () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   fond_canvas();
 });
 
+
+//Permet de télécharger le dessin réalisé avec le nom "Mon Barbapapa"
 sauvegarder.addEventListener("click", () => {
    const lien = document.createElement("a");
    lien.download = `Mon Barbapapa.jpg`;
    lien.href  = canvas.toDataURL();
    lien.click();
 });
+
 
 btn_outils.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -81,8 +88,12 @@ btn_outils.forEach(btn => {
   })
 });
 
+
+//Défini que le curseur sert à modifier la taille du trait
 curseur_taille.addEventListener("change", () =>  épaisseur = curseur_taille.value);
 
+
+//Permet de sélectionner les couleurs dans la barre d'outil et que le trait soit de la couleur sélectionnée 
 btns_couleur.forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelector(".couleur.actif").classList.remove("actif");
