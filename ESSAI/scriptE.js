@@ -83,12 +83,13 @@ btn_outils.forEach(btn => {
 
 curseur_taille.addEventListener("change", () =>  épaisseur = curseur_taille.value);
 
-btns_couleur .forEach(btn => {
+btns_couleur.forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelector(".couleur.actif").classList.remove("actif");
     btn.classList.add("actif");
-    couleur_actuelle = window.getComputedStyle(btn).getPropertyValue("background");
-    console.log(window.getComputedStyle(btn).getPropertyValue("background"));
+    couleur_actuelle = window.getComputedStyle(btn).getPropertyValue("background-color");
+    console.log(couleur_actuelle);
+
   });
 });
 
