@@ -7,8 +7,8 @@ couleur_perso = document.querySelector("#couleur_perso"),
 btn_outils = document.querySelectorAll(".outil");
 ctx = canvas.getContext("2d");
 
-
-let  Dessine = false, 
+let prevMouseX, prevMouseY, snapshot
+Dessine = false, 
 outil_selectione = "pinceau",
 couleur_actuelle = "#000",
 épaisseur = 5;
@@ -18,6 +18,12 @@ const fond_canvas = () => {
   ctx.fillRect(0,0,canvas.width, canvas.height);
   ctx.fillStyle = couleur_actuelle;
 }
+
+const dessinerRect = (e) => {
+  
+  ctx.fillRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
+}
+
 
 window.addEventListener("load", () => {
     canvas.width = canvas.offsetWidth;
@@ -29,6 +35,7 @@ window.addEventListener("load", () => {
 
 const startDraw = () => {
   Dessine = !Dessine;
+  
   ctx.beginPath();
   ctx.lineWidth = épaisseur;
   ctx.strokeStyle = couleur_actuelle;
@@ -38,10 +45,14 @@ const startDraw = () => {
 const drawing = (e) => {
   if(!Dessine) return
 
+  
+
   if(outil_selectione === "pinceau" || outil_selectione === "gomme") {
     ctx.strokeStyle = outil_selectione === "gomme" ? "#fff" : couleur_actuelle;
     ctx.lineTo(e.offsetX,e.offsetY);
     ctx.stroke();
+  } else if (outil_selectione === "rectangle"){
+      dessinerRect(e);
   }
 
 }
